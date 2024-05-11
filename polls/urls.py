@@ -8,12 +8,12 @@ urlpatterns = [
         path("", view=views.index, name="index"),
 
         # ex: /polls/5
-        path("<int:question_id>/", view=views.detail,
+        path("<int:pk>/", view=views.detail,
              name="detail"),
 
         # ex: /polls/5/results/
         path(
-            "<int:question_id>/results/", 
+            "<int:pk>/results/", 
             view=views.results,
             name="results"),
 
