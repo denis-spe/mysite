@@ -15,7 +15,7 @@ class IndexView(generic.ListView):
         """
         Return last five published question
         """
-        return Question.object.order_by("-pub_date")[:5]
+        return Question.objects.order_by("-pub_date")[:5]
 
 
 class DetailView(generic.DetailView):
